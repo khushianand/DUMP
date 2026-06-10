@@ -22,6 +22,20 @@ The default Light theme uses a soft SaaS-style palette: background `#F7F9FC`, ca
 
 The Dark theme uses a premium slate-grey cybersecurity palette: background `#353F4A`, cards `#404A56`, sidebar `#38424D`, panels `#444E5A`, border `#5B6673`, primary text `#F4F7FA`, secondary text `#C8D0D8`, muted text `#98A3AF`, disabled text `#8A949F`, blue accent `#4A90FF`, green accent `#2EE67B`, purple accent `#9B6DFF`, purple glow `#B794F4`, orange accent `#FFB020`, and orange glow `#FFD166`.
 
+## Code organization
+
+The PyQt implementation is split by UI section:
+
+```text
+vulnerability_gui_pyqt.py   # Main application orchestration
+header_section.py           # Header/title/status/theme controls
+sidebar_section.py          # Sidebar navigation and illustration
+updates_card_section.py     # KPI/update cards below the header
+file_selection_section.py   # Operation mode and file selection form
+live_logs_section.py        # Live logs panel and log row theming
+ui_support.py               # Shared assets, palettes, styling, buttons, cards
+```
+
 ## Assets
 
 GUI images are loaded from the repository-relative `assets/` folder:
